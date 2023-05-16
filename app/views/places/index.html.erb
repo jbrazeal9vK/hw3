@@ -1,12 +1,7 @@
 <h1>Places I've Been</h1>
 
 <% for place in @places %>
-  <p><%= place %></p>
+  <p><a href="/places/<%= place["id"]%>"></a><%= place["name"] %></p>
 <% end %>
 
-<form action="/places">
-  <input type="text" name="new">
-  <button>Add</button>
-</form>
-
-<p> New Place</p>
+<p><a href="places/new">New Place</a></p>
